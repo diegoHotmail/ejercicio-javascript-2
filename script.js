@@ -19,7 +19,29 @@ window.addEventListener('load', onLoad);
 
 function onLoad() {
 
-    // Seleccionotodos los elementos span
+    // Selecciono el elemento con la clase seleted
+    let li_3 = document.getElementById('selected');
+    console.log(li_3);
+
+    // Selecciono el elemento padre
+    let lista = li_3.parentNode;
+    console.log(lista);
+
+    // Selecciono el elemento padre
+    let ul = lista.parentNode;
+    console.log(ul);
+
+    // Hijos ul
+    let hijosUl = ul.childNodes;
+    console.log(hijosUl);
+
+    for (let i = 0; i < hijosUl.length; i++) {
+        let hijosLi = hijosUl[i].childNodes;
+        console.log(hijosLi);
+    }
+
+
+    // Selecciono todos los elementos span
     let span = document.querySelectorAll('span');
 
     //Contador de elementos
