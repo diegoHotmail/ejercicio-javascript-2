@@ -81,7 +81,7 @@ function onLoad() {
                 // Guardo cada iteración que cumple la condición
                 liPares = elemento[i];
                 console.log(liPares);
-                // Añado cada iteración a array
+                // Añado cada iteración al array
                 arrayPares.push(liPares);
                 // Elimino los elementos pares
                 liPares.remove();
@@ -101,7 +101,7 @@ function onLoad() {
     let ul_2 = document.getElementById('list2');
     console.log(ul_2);
 
-    // Recorre tantos elementos como la lsta anterior
+    // Recorre tantos elementos como la lista anterior
     for (let i = 0; i < span.length; i++) {
 
         // Crea elementos li
@@ -114,7 +114,7 @@ function onLoad() {
         li2.appendChild(button);
     }
 
-    // Seeleciona los elementos button
+    // Seleciona los elementos button
     var button = document.querySelectorAll("button");
     console.log(button);
 
