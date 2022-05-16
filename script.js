@@ -68,24 +68,32 @@ function onLoad() {
     let li = document.querySelectorAll('li');
     console.log(li);
 
-    // Recorro con bucle los elemento li
-    var arrayPares = [];
-    for (let i = 0; i < li.length; i++) {
-        // Selecciono los elementos pares
-        if (i % 2 != 0) {
-            // Compruebo que entra en el if
-            console.log("Entra en if");
-            // Guardo cada iteración que cumple la condición
-            liPares = li[i];
-            console.log(liPares);
-            // Añado cada iteración a array
-            arrayPares.push(liPares);
-            // Elimino los elementos pares
-            liPares.remove();
-        };
+    // Función para eliminar elementos pares
+    function eliminarPares(elemento) {
+        console.log("Ejecuta función eliminar pares")
+            // Recorro con bucle los elemento li
+        var arrayPares = [];
+        for (let i = 0; i < elemento.length; i++) {
+            // Selecciono los elementos pares
+            if (i % 2 != 0) {
+                // Compruebo que entra en el if
+                console.log("Entra en if");
+                // Guardo cada iteración que cumple la condición
+                liPares = elemento[i];
+                console.log(liPares);
+                // Añado cada iteración a array
+                arrayPares.push(liPares);
+                // Elimino los elementos pares
+                liPares.remove();
+
+            };
+        }
+        //Muestro el erray de elementos pares
+        console.log(arrayPares);
     }
-    //Muestro el erray de elementos pares
-    console.log(arrayPares);
+
+    // Ejecuta función
+    eliminarPares(li);
 
     // --------- PUNTO 3 ---------- //
 
@@ -137,6 +145,11 @@ function onLoad() {
     console.log(ultimoBoton);
     // Añade atributo al último botón
     ultimoBoton.setAttribute("disabled", "");
+
+    // Selecciona los hijos de la lista 2
+    let hijosList2 = ul_2.childNodes;
+    // Ejecuta función
+    eliminarPares(hijosList2);
 
 
 
