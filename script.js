@@ -19,6 +19,8 @@ window.addEventListener('load', onLoad);
 
 function onLoad() {
 
+    // --------- PUNTO 1 ---------- //
+
     // Selecciono el elemento con la clase seleted
     let spam_3 = document.getElementById('selected');
     console.log(spam_3);
@@ -60,14 +62,16 @@ function onLoad() {
         span[i].className += " element-" + increneto;
     }
 
+    // --------- PUNTO 2 ---------- //
+
     // Selecciono todos los elementos li
     let li = document.querySelectorAll('li');
     console.log(li);
 
-    // Selecciono los elementos pares
+    // Recorro con bucle los elemento li
     var arrayPares = [];
     for (let i = 0; i < li.length; i++) {
-
+        // Selecciono los elementos pares
         if (i % 2 != 0) {
             // Compruebo que entra en el if
             console.log("Entra en if");
@@ -76,12 +80,63 @@ function onLoad() {
             console.log(liPares);
             // Añado cada iteración a array
             arrayPares.push(liPares);
-            // Elimino loe elementos pares
+            // Elimino los elementos pares
             liPares.remove();
         };
     }
     //Muestro el erray de elementos pares
     console.log(arrayPares);
+
+    // --------- PUNTO 3 ---------- //
+
+    // Selecciono el elemento con id list2
+    let ul_2 = document.getElementById('list2');
+    console.log(ul_2);
+
+    // Recorre tantos elementos como la lsta anterior
+    for (let i = 0; i < span.length; i++) {
+
+        // Crea elementos li
+        let li2_1 = document.createElement("li");
+        // Añade elementos li a ul
+        let li2 = ul_2.appendChild(li2_1);
+        // Crea elemento button
+        let button = document.createElement("button");
+        // Añade elementos button a li
+        li2.appendChild(button);
+    }
+
+    // Seeleciona los elementos button
+    var button = document.querySelectorAll("button");
+    console.log(button);
+
+    // Contador de elementos
+    var cont = 0;
+    // recorre todos los elementos button
+    for (let i = 0; i < button.length; i++) {
+        // contador
+        increneto = ++cont;
+        // Añade la clase a los elementos button
+        button[i].className += " element-" + increneto;
+        // Escribe texto en los elementos button
+        button[i].innerHTML = "texto ejemplo " + increneto;
+    }
+
+    // --------- PUNTO 4 ---------- //
+
+    // let claseBoton = "element-" + button.length;
+    // let ultimoBotonClase = document.getElementsByClassName(claseBoton);
+    // console.log(ultimoBotonClase);
+    // ultimoBotonClase[1].setAttribute("disabled", "");
+
+    // Calcula el valor del último botón
+    let numUltimoBoton = button.length - 1;
+    console.log(numUltimoBoton);
+    // Seleciona el último botón
+    let ultimoBoton = button[numUltimoBoton];
+    console.log(ultimoBoton);
+    // Añade atributo al último botón
+    ultimoBoton.setAttribute("disabled", "");
 
 
 
