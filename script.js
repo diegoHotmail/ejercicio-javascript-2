@@ -149,7 +149,7 @@ function onLoad() {
     // Selecciona los hijos de la lista 2
     let hijosList2 = ul_2.childNodes;
     // Ejecuta función
-    eliminarPares(hijosList2);
+    //eliminarPares(hijosList2);
 
 
 
